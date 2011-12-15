@@ -1,0 +1,9 @@
+<?php
+// Bootstrap file, can setup everything that cannot be done inside build file (phpunit...)
+
+// start autoloader
+include_once('Zend/Loader.php');
+Zend_Loader::loadClass('Zend_Loader_Autoloader');
+$autoloader = Zend_Loader_Autoloader::getInstance();
+$autoloader->registerNamespace('JenkinsSampleApp_');
+$autoloader->setFallbackAutoloader(true);

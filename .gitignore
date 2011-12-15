@@ -1,0 +1,18 @@
+# ignore build folder
+build/*.xml
+
+# ignore eclipse file
+.buildpath
+.project
+.settings/*
+
+# ignore log file
+*.log
+
+# ignore svn file
+*/.svn/*
+*.svn-base
+*.svn*entries
+*.svn*
+build/build/*
+tests/bootstrap.php

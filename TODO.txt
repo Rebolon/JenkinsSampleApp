@@ -1,0 +1,3 @@
+Modifier le comportement du bootstrap :
+	plus de repertoire configs dans les tests
+	ajouter le globalIniSection dans le bootstrap.php
