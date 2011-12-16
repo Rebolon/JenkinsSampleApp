@@ -2,6 +2,8 @@
 
 namespace JenkinsSampleApp\Entity;
 
+use \ReflectionClass;
+
 abstract class EntityAbstract
 {
     /**

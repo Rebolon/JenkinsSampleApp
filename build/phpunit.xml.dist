@@ -23,13 +23,10 @@
   </logging>
 
   <filter>
-    <whitelist addUncoveredFilesFromWhitelist="true">
-      <directory suffix=".php">C:/dev/library/Infolegale</directory>
-    </whitelist>
   </filter>
   
   <php>
-    <includePath>C:/dev/www/jenkinsSampleApp;C:/dev/www/jenkinsSampleApp/library;C:/dev/www/jenkinsSampleApp/tests;C:/dev/library/Infolegale</includePath>
+    <includePath>/dev/Zend/ZendServer/bin/PEAR;/dev/library/ZendFramework-latest/library;./jenkinsSampleApp;./jenkinsSampleApp/library;./jenkinsSampleApp/tests;</includePath>
     <ini name="memory_limit" value="512M" />
   </php>
 </phpunit>
