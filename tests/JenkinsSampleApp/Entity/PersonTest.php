@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\JenkinsSampleApp\Entity;
+namespace JenkinsSampleApp\Tests\Entity;
 
 use \PHPUnit_Framework_TestCase;
 use \DateTime;
@@ -9,11 +9,11 @@ use JenkinsSampleApp\Entity\Person;
 /**
  *
  */
-class JenkinsSampleApp_Entity_PersonTest extends PHPUnit_Framework_TestCase
+class PersonTest extends PHPUnit_Framework_TestCase
 {
     /**
      * Enter description here ...
-     * @var JenkinsSampleApp_Entity_Person
+     * @var JenkinsSampleApp\Entity\Person
      */
     protected $_person;
     

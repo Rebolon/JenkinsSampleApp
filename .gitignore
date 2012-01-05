@@ -1,6 +1,10 @@
 # ignore build folder
 build/*.xml
 
+# ignore vendor and composer
+vendor/*
+composer.phar
+
 # ignore eclipse file
 .buildpath
 .project
