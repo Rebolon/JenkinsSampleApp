@@ -17,7 +17,7 @@ abstract class EntityAbstract
     public function __get($name)
     {
         $returnedValue = null;
-        // ucfirst est inutile car PHP est insensible à la casse des méthodes et classes
+        // ucfirst is useless cause PHP is not case sensitive on method & class
         $getter = 'get' . ucfirst($name);
         $publicVarName = $name;
         $nonPublicvarName = '_' . $name;
@@ -57,5 +57,5 @@ abstract class EntityAbstract
                 }
             }
         }
-	}
+    }
 }
