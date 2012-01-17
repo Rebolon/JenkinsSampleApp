@@ -29,6 +29,7 @@
     <antcall target="pdepend"/>
     <antcall target="phpmd"/>
    </sequential>
+   <antcall target="lint"/>
    <antcall target="phpcpd"/>
    <antcall target="phpcs"/>
    <antcall target="apidoc"/>
@@ -90,5 +91,21 @@
   </exec>
  </target>
 
+ <target name="lint" description="check syntax error code">
+  <apply executable="php" failonerror="true">
+   <arg value="-l" />
+
+   <fileset dir="${source}">
+    <include name="**/*.php" />
+    <modified />
+   </fileset>
+
+   <fileset dir="${source}/../../tests">
+    <include name="**/*.php" />
+    <modified />
+   </fileset>
+  </apply>
+ </target>
+ 
  <target name="build" depends="clean,parallelTasks,phpunit"/>
 </project>

@@ -17,7 +17,8 @@ abstract class EntityAbstract
     public function __get($name)
     {
         $returnedValue = null;
-        $getter = 'get' . ucfirst($name); // ucfirst est inutile car PHP est insensible à la casse des méthodes et classes
+        // ucfirst est inutile car PHP est insensible à la casse des méthodes et classes
+        $getter = 'get' . ucfirst($name);
         $publicVarName = $name;
         $nonPublicvarName = '_' . $name;
         
@@ -37,24 +38,24 @@ abstract class EntityAbstract
      * and also properties that are array of object that extends self
      */
     public function __clone()
-	{
-		$reflect = new ReflectionClass($this);
-		$propList = $reflect->getProperties();
-		foreach ($propList as $prop) {
-			$propName = $prop->getName();
+    {
+        $reflect = new ReflectionClass($this);
+        $propList = $reflect->getProperties();
+        foreach ($propList as $prop) {
+            $propName = $prop->getName();
             if (is_object($this->$propName)
-                && $this->$propName instanceOf self) {
+            && $this->$propName instanceOf self) {
                 $this->$propName = clone $this->$propName;
             }
-            
+
             if (is_array($this->$propName)) {
                 foreach ($this->$propName as &$item) {
                     if (is_object($item)
-                        && $item instanceOf self) {
+                    && $item instanceOf self) {
                         $item = clone $item;
                     }
                 }
             }
-		}
+        }
 	}
 }

@@ -19,4 +19,3 @@ composer.phar
 *.svn*entries
 *.svn*
 build/build/*
-tests/bootstrap.php
